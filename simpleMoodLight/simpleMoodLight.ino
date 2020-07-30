@@ -5,9 +5,9 @@
 
 
 //Change these to match the pins on your Arduino - make sure theyre PWM capable
-int greenPin = 10;
-int bluePin = 5;
-int redPin = 9;
+int greenPin = 3;
+int bluePin = 6;
+int redPin = 5;
 
 void setup(){
 	pinMode(greenPin, OUTPUT);
@@ -24,8 +24,8 @@ void loop(){
 void fadeFromTo(int from, int to){
 	for(int i = 0; i < 255; i++){
 		analogWrite(to, i);
-		delay(5);
+		delay(1);
 		analogWrite(from, 255 - i);
-		delay(5);
+		delay(2);
 	}
 }
